@@ -9,10 +9,73 @@
 </head>
 
 <body>
-    <div class="norse" id="credit">
-        Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a>
-        on
-        <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a>
+    <div id="container" class="flex-h">
+        <div class="left-column">
+            <img id="image-left" src="./resources/grass.jpg" alt="Nice-looking photo of grass">
+            <div id="odin-banner" class="flex-h">
+                <img id="odin-logo" src="./resources/odin-lined.png" alt="Odin Project Logo">
+                <span class="norse unselectable">ODIN</span>
+            </div>
+            <div id="credit">
+                Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a>
+                on
+                <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a>
+            </div>
+        </div>
+        <div class="right-column flex-v">
+            <div id="head-text">
+                <div>
+                    This is not a real online service! You know you need something like this in your life to help you
+                    realize you deepest dreams.
+                    <br>
+                    Sign up <i>now</i> to get started.
+                </div>
+                <div>
+                    You <i>know</i> you want to.
+                </div>
+            </div>
+
+            <div id="form-container">
+                <div id="form-header">Let's do this</div>
+                <form action="https://httpbin.org/post" method="post">
+                    <div id="fieldset" class="flex-h">
+                        <div class="field-display flex-v">
+                            <label for="first_name">FIRST NAME</label>
+                            <input name="first_name" id="first_name" type="text" required>
+                        </div>
+
+                        <div class="field-display flex-v">
+                            <label for="last_name">LAST NAME</label>
+                            <input name="last_name" id="last_name" type="text" required>
+                        </div>
+
+                        <div class="field-display flex-v">
+                            <label for="email">EMAIL</label>
+                            <input name="email" id="email" type="email" required>
+                        </div>
+
+                        <div class="field-display flex-v">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input name="phone" id="phone" type="tel">
+                        </div>
+
+                        <div class="field-display flex-v">
+                            <label for="password">PASSWORD</label>
+                            <input name="password" id="password" type="password" required>
+                        </div>
+
+                        <div class="field-display flex-v">
+                            <label for="password_conf">PASSWORD</label>
+                            <input name="password_conf" id="password_conf" type="password" required>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" id="account-btn">Create Account</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
     </div>
 </body>
 

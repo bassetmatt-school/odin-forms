@@ -7,6 +7,10 @@
     font-family: "Norse Bold";
 }
 
+:root {
+    --left-bar-width: 30%;
+}
+
 .flex-h, .flex-v {
     display: flex;
 }
@@ -23,4 +27,94 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    font-family: Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#container {
+    min-width: 100vw;
+}
+
+.left-column {
+    min-width: var(--left-bar-width);
+    max-width: var(--left-bar-width);
+    height: 100%;
+    overflow: clip;
+}
+
+#image-left {
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+#odin-banner {
+    position: absolute;
+    width: var(--left-bar-width);
+    background: rgba(10%, 10%, 10%, 50%);
+    color: white;
+    top: 8rem;
+    text-align: center;
+    font-size: 4em;
+    /* height: 6rem; */
+    justify-content: center;
+    align-items: center;
+}
+
+#odin-logo {
+    height: 96px;
+    width: auto;
+}
+
+#credit {
+    position: absolute;
+    bottom: 1rem;
+    color: white;
+    text-align: center;
+    width: var(--left-bar-width);
+    font-size: 10pt;
+}
+
+#credit>a {
+    color: white
+}
+
+
+
+.right-column {
+    width: calc(100% - var(--left-bar-width));
+    margin: 16px;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 40px 80px;
+}
+
+#head-text, #form-header {
+    font-weight: 600;
+    font-size: 18pt;
+    /* color: red */
+}
+
+
+#fieldset {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+#account-btn {
+    background-color: #596D48;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 24px;
+    font-weight: 600;
+    box-shadow: #4e5f3fad 2px 2px 3px 1px;
+    cursor: pointer;
 }
