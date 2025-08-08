@@ -38,12 +38,13 @@ body {
 
 #container {
     min-width: 100vw;
+    height: auto;
 }
 
 .left-column {
     min-width: var(--left-bar-width);
     max-width: var(--left-bar-width);
-    height: 100%;
+    height: max(100vh, 100%);
     overflow: clip;
 }
 
@@ -88,17 +89,20 @@ body {
 
 .right-column {
     width: calc(100% - var(--left-bar-width));
-    margin: 16px;
-    justify-content: center;
-    gap: 40px;
+    justify-content: start;
+    gap: 80px;
     margin: 0;
-    padding: 40px 80px;
+    padding: 40px 5%;
 }
 
 #head-text, #form-header {
     font-weight: 600;
     font-size: 18pt;
     /* color: red */
+}
+
+#head-text {
+    gap: 16px
 }
 
 
@@ -109,6 +113,38 @@ body {
     margin-bottom: 40px;
 }
 
+.field-line {
+    gap: 24px
+}
+
+label {
+    color: #292929;
+    font-weight: 600;
+    font-size: 9pt;
+    letter-spacing: .1rem;
+}
+
+input {
+    border-color: #E5E7EB;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 2px 4px;
+    /* width: 250px; */
+}
+
+input:focus {
+    box-shadow: rgba(0, 0, 0, 0.747) 2px 2px 3px;
+    outline: none;
+    border-color: rgb(70, 135, 255);
+}
+
+input:invalid {
+    border-color: rgb(208, 82, 82);
+}
+
+
+
 #account-btn {
     background-color: #596D48;
     color: white;
@@ -117,4 +153,14 @@ body {
     font-weight: 600;
     box-shadow: #4e5f3fad 2px 2px 3px 1px;
     cursor: pointer;
+}
+
+#login {
+    font-size: 12pt;
+}
+
+#login>a {
+    color: #596D48;
+    font-weight: 700;
+    text-decoration: none;
 }

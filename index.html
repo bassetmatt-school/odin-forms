@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="right-column flex-v">
-            <div id="head-text">
+            <div id="head-text" class="flex-v">
                 <div>
                     This is not a real online service! You know you need something like this in your life to help you
                     realize you deepest dreams.
@@ -38,35 +38,41 @@
             <div id="form-container">
                 <div id="form-header">Let's do this</div>
                 <form action="https://httpbin.org/post" method="post">
-                    <div id="fieldset" class="flex-h">
-                        <div class="field-display flex-v">
-                            <label for="first_name">FIRST NAME</label>
-                            <input name="first_name" id="first_name" type="text" required>
+                    <div id="fieldset" class="flex-v">
+                        <div class="field-line flex-h">
+                            <div class="field-display flex-v">
+                                <label for="first_name">FIRST NAME</label>
+                                <input name="first_name" id="first_name" type="text" required>
+                            </div>
+
+                            <div class="field-display flex-v">
+                                <label for="last_name">LAST NAME</label>
+                                <input name="last_name" id="last_name" type="text" required>
+                            </div>
                         </div>
 
-                        <div class="field-display flex-v">
-                            <label for="last_name">LAST NAME</label>
-                            <input name="last_name" id="last_name" type="text" required>
+                        <div class="field-line flex-h">
+                            <div class="field-display flex-v">
+                                <label for="email">EMAIL</label>
+                                <input name="email" id="email" type="email" required>
+                            </div>
+
+                            <div class="field-display flex-v">
+                                <label for="phone">PHONE NUMBER</label>
+                                <input name="phone" id="phone" type="tel" pattern="([0-9 \-\+])+">
+                            </div>
                         </div>
 
-                        <div class="field-display flex-v">
-                            <label for="email">EMAIL</label>
-                            <input name="email" id="email" type="email" required>
-                        </div>
+                        <div class="field-line flex-h">
+                            <div class="field-display flex-v">
+                                <label for="password">PASSWORD</label>
+                                <input name="password" id="password" type="password" required>
+                            </div>
 
-                        <div class="field-display flex-v">
-                            <label for="phone">PHONE NUMBER</label>
-                            <input name="phone" id="phone" type="tel">
-                        </div>
-
-                        <div class="field-display flex-v">
-                            <label for="password">PASSWORD</label>
-                            <input name="password" id="password" type="password" required>
-                        </div>
-
-                        <div class="field-display flex-v">
-                            <label for="password_conf">PASSWORD</label>
-                            <input name="password_conf" id="password_conf" type="password" required>
+                            <div class="field-display flex-v">
+                                <label for="password_conf">CONFIRM PASSWORD</label>
+                                <input name="password_conf" id="password_conf" type="password" required>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -74,7 +80,9 @@
                     </div>
                 </form>
             </div>
-
+            <div id="login">
+                Already have an account? <a href="#">Log in</a>
+            </div>
         </div>
     </div>
 </body>
